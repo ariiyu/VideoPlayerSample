@@ -1,0 +1,7 @@
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+*.xcworkspace
+.DS_Store
+VideoPlayer/Pods/*
+
+
