@@ -46,9 +46,12 @@ class ThirdViewController: UIViewController {
     }
 
     func didPlayerItemReachEnd(notification: NSNotification) {
+        guard let player = playerViewController.player else {
+            return
+        }
         // リピート再生
-        playerViewController.player.seekToTime(kCMTimeZero)
-        playerViewController.player.play()
+        player.seekToTime(kCMTimeZero)
+        player.play()
     }
     
     override func didReceiveMemoryWarning() {
