@@ -16,11 +16,11 @@ class SecondViewController: AVPlayerViewController {
         super.viewDidLoad()
         
         // 動画ファイルのURLを取得
-        let moviePath = NSBundle.mainBundle().pathForResource("hogevideo", ofType: "mp4")!
-        let url = NSURL(fileURLWithPath: moviePath)
+        let moviePath = Bundle.main.path(forResource: "hogevideo", ofType: "mp4")!
+        let url = URL(fileURLWithPath: moviePath)
         
         // アイテム取得
-        let playerItem = AVPlayerItem(URL: url)
+        let playerItem = AVPlayerItem.init(url: url)
         
         // 生成
         player = AVPlayer(playerItem: playerItem)

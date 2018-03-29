@@ -18,12 +18,12 @@ class ThirdViewController: UIViewController {
         super.viewDidLoad()
         
         // 動画ファイルのURLを取得
-        let bundle = NSBundle.mainBundle()
-        let path = bundle.pathForResource("hogevideo", ofType: "mp4")
-        let url = NSURL(fileURLWithPath: path!)
+        let bundle = Bundle.main
+        let path = bundle.path(forResource: "hogevideo", ofType: "mp4")
+        let url = URL(fileURLWithPath: path!)
 
         // アイテム取得
-        let playerItem = AVPlayerItem(URL: url)
+        let playerItem = AVPlayerItem.init(url: url)
         
         // 生成
         let player = AVPlayer(playerItem: playerItem)
@@ -31,12 +31,12 @@ class ThirdViewController: UIViewController {
         playerViewController.player = player
         
         // 設定
-        playerViewController.view.frame = CGRectMake(54, 96, view.bounds.width - 108, view.bounds.height - 192)
+        playerViewController.view.frame = CGRect(x: 54, y: 96, width: view.bounds.width - 108, height: view.bounds.height - 192)
         playerViewController.showsPlaybackControls = true // 操作パネルを非表示にする場合はfalse
-        playerViewController.videoGravity = AVLayerVideoGravityResizeAspect // 矩形にフィット
+        playerViewController.videoGravity = AVLayerVideoGravity.resizeAspect.rawValue // 矩形にフィット
         
         // 通知登録
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "didPlayerItemReachEnd:", name: AVPlayerItemDidPlayToEndTimeNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(didPlayerItemReachEnd), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
         
         // 表示
         view.addSubview(playerViewController.view)
@@ -45,12 +45,12 @@ class ThirdViewController: UIViewController {
         player.play()
     }
 
-    func didPlayerItemReachEnd(notification: NSNotification) {
+    @objc func didPlayerItemReachEnd(notification: NSNotification) {
         guard let player = playerViewController.player else {
             return
         }
         // リピート再生
-        player.seekToTime(kCMTimeZero)
+        player.seek(to: kCMTimeZero)
         player.play()
     }
     
