@@ -26,7 +26,7 @@ class SecondViewController: AVPlayerViewController {
         player = AVPlayer(playerItem: playerItem)
         
         // 再生
-        player.play()
+        player?.play()
     }
 
     override func didReceiveMemoryWarning() {
