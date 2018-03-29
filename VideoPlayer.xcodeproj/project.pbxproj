@@ -15,7 +15,7 @@
 		421B52721AFC4978008A4A1B /* VideoPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421B52711AFC4978008A4A1B /* VideoPlayerTests.swift */; };
 		4252BB9E1AFC6191008B7DA3 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4252BB9D1AFC6191008B7DA3 /* FirstViewController.swift */; };
 		4252BBA01AFC622E008B7DA3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4252BB9F1AFC622E008B7DA3 /* SecondViewController.swift */; };
-		4252BBA41AFC9132008B7DA3 /* hogevideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4252BBA31AFC9132008B7DA3 /* hogevideo.mp4 */; };
+		42C919B2206CBC770088893D /* hogevideo.mov in Resources */ = {isa = PBXBuildFile; fileRef = 42C919B1206CBC770088893D /* hogevideo.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,7 @@
 		421B52711AFC4978008A4A1B /* VideoPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerTests.swift; sourceTree = "<group>"; };
 		4252BB9D1AFC6191008B7DA3 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		4252BB9F1AFC622E008B7DA3 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		4252BBA31AFC9132008B7DA3 /* hogevideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = hogevideo.mp4; sourceTree = "<group>"; };
+		42C919B1206CBC770088893D /* hogevideo.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = hogevideo.mov; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +98,7 @@
 		421B52591AFC4978008A4A1B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4252BBA31AFC9132008B7DA3 /* hogevideo.mp4 */,
+				42C919B1206CBC770088893D /* hogevideo.mov */,
 				421B525A1AFC4978008A4A1B /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -205,7 +205,7 @@
 				421B52611AFC4978008A4A1B /* Main.storyboard in Resources */,
 				421B52661AFC4978008A4A1B /* LaunchScreen.xib in Resources */,
 				421B52631AFC4978008A4A1B /* Images.xcassets in Resources */,
-				4252BBA41AFC9132008B7DA3 /* hogevideo.mp4 in Resources */,
+				42C919B2206CBC770088893D /* hogevideo.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

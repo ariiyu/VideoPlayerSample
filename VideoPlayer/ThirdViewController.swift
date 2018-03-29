@@ -19,7 +19,7 @@ class ThirdViewController: UIViewController {
         
         // 動画ファイルのURLを取得
         let bundle = Bundle.main
-        let path = bundle.path(forResource: "hogevideo", ofType: "mp4")
+        let path = bundle.path(forResource: "hogevideo", ofType: "mov")
         let url = URL(fileURLWithPath: path!)
 
         // アイテム取得

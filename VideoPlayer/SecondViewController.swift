@@ -16,7 +16,7 @@ class SecondViewController: AVPlayerViewController {
         super.viewDidLoad()
         
         // 動画ファイルのURLを取得
-        let moviePath = Bundle.main.path(forResource: "hogevideo", ofType: "mp4")!
+        let moviePath = Bundle.main.path(forResource: "hogevideo", ofType: "mov")!
         let url = URL(fileURLWithPath: moviePath)
         
         // アイテム取得
